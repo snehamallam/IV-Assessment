@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Score Distribution by Tutoring Sessions</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body class="chart-page">
+
+    <div class="top-bar">
+        <a href="HomePage.html" class="home-btn">← Back to Home</a>
+    </div>
+
+    <div class="header">
+        <h1 class="chart-title">Tutoring Sessions vs Exam Score (Violin Chart)</h1>
+        <p>
+            This chart shows score distribution based on tutoring sessions.
+            Hover over a violin to view summary statistics and click a violin to focus on a specific tutoring-session group.
+        </p>
+    </div>
+
+    <div class="filter-container">
+        <label for="educationFilter">Filter by Parental Education:</label>
+        <select id="educationFilter">
+            <option value="All">All</option>
+            <option value="High School">High School</option>
+            <option value="College">College</option>
+            <option value="Postgraduate">Postgraduate</option>
+        </select>
+    </div>
+
+    <div class="chart-wrapper">
+        <div class="card">
+            <div id="chart"></div>
+        </div>
+
+        <div id="chartInsight"></div>
+    </div>
+
+    <div id="tooltip"></div>
+
+    <script src="JS/Vilon.js"></script>
+
+</body>
+</html>

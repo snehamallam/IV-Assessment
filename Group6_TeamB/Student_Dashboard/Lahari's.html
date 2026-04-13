@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance vs Exam Score</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body class="chart-page">
+
+<div class="top-bar">
+    <a href="HomePage.html" class="home-btn">← Back to Home</a>
+</div>
+
+<div class="header">
+    <h1 class="chart-title">Average Exam Score by Attendance</h1>
+    <p>
+        This chart shows how attendance percentage affects average exam scores.
+        Hover over a bar to see more details and click a bar to focus on a specific attendance range.
+    </p>
+</div>
+
+<div class="filter-container">
+    <label for="genderFilter">Filter by Gender:</label>
+    <select id="genderFilter">
+        <option value="All">All</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+</div>
+
+<div class="chart-wrapper">
+    <div class="small-card">
+        <div id="chart"></div>
+    </div>
+
+    <div id="chartInsight"></div>
+</div>
+
+<script src="JS/Bar.js"></script>
+
+</body>
+</html>
