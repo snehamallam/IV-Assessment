@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Overview</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body class="chart-page">
+
+    <div class="top-bar">
+        <a href="HomePage.html" class="home-btn">← Back to Home</a>
+    </div>
+
+    <div class="header">
+        <h1 class="chart-title">Student Performance Overview</h1>
+        <p>
+            Radar chart showing how different factors affect exam performance.
+            Hover over a point to see details and click a factor to focus on it.
+        </p>
+    </div>
+
+    <div class="filter-container">
+        <label for="filter">Filter by Score:</label>
+        <select id="filter">
+            <option value="All">All</option>
+            <option value="Below80">Below 80</option>
+            <option value="80to90">80 - 90</option>
+            <option value="Above90">Above 90</option>
+        </select>
+    </div>
+
+    <div class="chart-wrapper">
+        <div class="card">
+            <div id="chart"></div>
+        </div>
+
+        <div id="chartInsight"></div>
+    </div>
+
+    <div id="tooltip"></div>
+
+    <script src="JS/Radar.js"></script>
+
+</body>
+</html>

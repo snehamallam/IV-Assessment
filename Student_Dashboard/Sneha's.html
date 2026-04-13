@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hours Studied vs Exam Score</title>
+    <link rel="stylesheet" href="Style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+</head>
+
+<body class="chart-page scatter-page">
+
+    <div class="top-bar">
+        <a href="HomePage.html" class="home-btn">← Back to Home</a>
+    </div>
+
+    <div class="header">
+        <h1 class="chart-title">Hours Studied vs Exam Score</h1>
+        <p>
+            This chart shows the relationship between hours studied and exam score.
+            Points are colored by whether the student's exam score improved compared with previous scores.
+        </p>
+    </div>
+
+    <div class="filter-container">
+        <label for="hoursFilter">Filter by Study Hour Range:</label>
+        <select id="hoursFilter">
+            <option value="all">All</option>
+            <option value="1-10">1–10 Hours</option>
+            <option value="11-20">11–20 Hours</option>
+            <option value="21-30">21–30 Hours</option>
+            <option value="31+">31+ Hours</option>
+        </select>
+    </div>
+
+    <div class="chart-wrapper">
+        <div class="card">
+            <canvas id="scatterChart"></canvas>
+        </div>
+
+        <div id="chartInsight"></div>
+    </div>
+
+    <script src="JS/Scatter.js"></script>
+
+</body>
+</html>

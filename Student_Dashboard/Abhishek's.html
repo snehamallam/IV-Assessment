@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sleep vs Score</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="chart-page">
+
+    <div class="top-bar">
+        <a href="HomePage.html" class="home-btn">← Back to Home</a>
+    </div>
+
+    <div class="header">
+        <h1 class="chart-title">Average Exam Score by Sleep Hours</h1>
+        <p>
+            This line chart shows how sleep duration affects exam performance.
+            Hover over a point to see details and click a point to focus on a specific sleep duration.
+        </p>
+    </div>
+
+    <div class="filter-container">
+        <label for="tutoringFilter">Filter by Tutoring Sessions:</label>
+        <select id="tutoringFilter">
+            <option value="All">All</option>
+            <option value="Low">Low (0–2)</option>
+            <option value="Medium">Medium (3–5)</option>
+            <option value="High">High (6+)</option>
+        </select>
+    </div>
+
+    <div class="chart-wrapper">
+        <div class="card small-card">
+            <div id="chart"></div>
+        </div>
+
+        <div id="chartInsight"></div>
+    </div>
+
+    <script src="JS/Line.js"></script>
+
+</body>
+</html>
